@@ -1,0 +1,100 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#logo {
+    float: left;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    font-weight: bold;
+}
+#logo:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar-inverse .navbar-toggle {
+  border: 2px solid white;
+  &:hover, &:focus {
+    background-color: #00c6ff;
+  }
+}
+
+.jumbotron-img {
+    background-image: asset_url('address-search.png');
+    background-size: cover;
+    height: 430px;
+    margin-top: 10px;
+}
+.center {
+    text-align: center;
+}
+
+.input-box {
+    width: 90%;
+}
+.jumbotron-img h1 {
+    margin-top: 70px;
+    font-size: 46px;
+    color: #fff;
+}
+.lead-para {
+    color: #fff;
+}
+.signup {
+    margin-top: 90px;
+}
+.btn-xlarge {
+    font-size: 1.7em;
+    background-color: black;
+}
+
+.contact-actions {
+border-top: 1px solid #eaeaea;
+padding-top: 5px;
+}
+
+.contact-title {
+font-weight: bold;
+font-size: 1.5em;
+}
+
+.contact-body {
+border-top: 1px solid #eaeaea;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.contact-meta-details {
+border-top: 1px solid #eaeaea;
+margin-top: 15px;
+}
+
+.listing {
+list-style: none;
+padding-left: 0;
+}
+
+
+
+footer{
+   margin-top: 20px; 
+    width: 100%;
+}
+
+footer nav ul{
+    padding: 10px;
+    text-align: center;
+    
+}
+
+footer nav ul li{  
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline;
+    margin: 10px;
+}
