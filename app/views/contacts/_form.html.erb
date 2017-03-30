@@ -1,0 +1,95 @@
+
+<%= render 'shared/errors', obj: @contact  %>
+
+<%= form_for(@contact, :html => {class: "form-horizontal", role: "form"}) do |f| %>
+<div class='row'>
+  <div class='col-sm-4'>
+    <div class="form-group">
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name, class: "form-control input-box", placeholder: "First Name", autofocus: true %>
+    </div>
+  </div>
+  <div class='col-sm-4'>
+    <div class="form-group">
+      <%= f.label :middle_name %>
+      <%= f.text_field :middle_name, class: "form-control input-box", placeholder: "Middle Name", autofocus: true %>
+    </div>
+  </div>
+  <div class='col-sm-4'>
+    <div class="form-group">
+        <%= f.label :last_name %>
+        <%= f.text_field :last_name, class: "form-control input-box", placeholder: "Last Name", autofocus: true %>
+      </div>
+    </div>
+</div>
+  <div class='row'>
+    <div class='col-sm-4'>
+      <div class="form-group">
+        <%= f.label :street_number %>
+        <%= f.text_field :street_number, class: "form-control input-box", placeholder: "Street Number", autofocus: true %>
+      </div>
+    </div>
+    <div class='col-sm-4'>
+      <div class="form-group">
+        <%= f.label :street_name %>
+        <%= f.text_field :street_name, class: "form-control input-box", placeholder: "Street Name", autofocus: true %>
+      </div>
+    </div>
+    <div class='col-sm-4'>
+      <div class="form-group">
+        <%= f.label :address2 %>
+        <%= f.text_field :address2, class: "form-control input-box", placeholder: "Address 2", autofocus: true %>
+      </div>
+    </div>
+   </div>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :city %>
+        <%= f.text_field :city, class: "form-control input-box", placeholder: "City", autofocus: true %>
+      </div>
+  </div>
+  <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :state %>
+        <%= f.text_field :state, class: "form-control input-box", placeholder: "State", autofocus: true %>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :zipcode %>
+        <%= f.text_field :zipcode, class: "form-control input-box", placeholder: "zipcode" %>
+      </div>
+  </div>
+  </div>
+  <div class="row">
+  <div class="col-sm-4">
+      <div class="form-group">
+        <%= f.label :country %>
+        <%= f.text_field :country, class: "form-control input-box", placeholder: "Country" %>
+      </div>
+    </div>
+    <div class='col-sm-4'>
+    <div class="form-group">
+      <%= f.label :home_phone %>
+      <%= f.text_field :home_phone, class: "form-control input-box", placeholder: "Home Phone Number", autofocus: true %>
+    </div>
+  </div>
+  <div class='col-sm-4'>
+    <div class="form-group">
+      <%= f.label :mobile_phone %>
+      <%= f.text_field :mobile_phone, class: "form-control input-box", placeholder: "Mobile Phone Number", autofocus: true %>
+    </div>
+  </div>
+  </div>
+  
+    <div class="col-sm-4 col-sm-offset-4">
+      <div class="form-group">
+          <%= f.submit class: 'form-control  btn-primary' %>
+        </div>
+    </div>
+  <% end %>
+  <div class="col-xs-4 col-xs-offset-4">
+      [ <%= link_to "Cancel request and return to Contact listing", contacts_path %> ]
+  </div>
+

@@ -1,0 +1,37 @@
+<% obj.each do |contact| %>
+  <div class="row">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="well">
+        <div class="contact-title">
+        <%= link_to (contact.first_name + ' ' + contact.last_name), contact_path(contact) %>
+        </div>
+          <div class="contact-body">
+            <strong>Full Name: </strong><%= simple_format(contact.first_name + ' ' + contact.middle_name + ' ' + contact.last_name) %>
+            <strong>Complete Address: </strong>
+            <% if logged_in? %>
+              <%= simple_format(contact.address) %>
+              <strong>Home Phone Number: </strong> <%= number_to_phone(contact.home_phone, pattern: /(\d{1,3})(\d{3})(\d{4})$/, area_code: true) %><br>
+              <strong>Mobile Phone Number: </strong><%= number_to_phone(contact.mobile_phone, pattern: /(\d{1,3})(\d{3})(\d{4})$/, area_code: true) %>
+            <% else %>
+             <p class="text-danger" > You have to be member in order to see the address details, Please sign up or log in if already signed up! </p>
+            <% end %>
+            
+            <div class="contact-meta-details">
+              <small>Created by: <%= contact.user.full_name if contact.user%>,
+              <%= time_ago_in_words(contact.created_at) %> ago,
+              last updated: <%= time_ago_in_words(contact.updated_at) %> ago</small>
+            </div>
+          </div>
+          
+          <% if logged_in? && (current_user == contact.user || current_user.admin?) %>
+          <div class="contact-actions">
+            <%= link_to "Edit this contact", edit_contact_path(contact), class: "btn btn-sm btn-primary" %>
+            <%= link_to "Delete this contact", contact_path(contact), method: :delete,
+                data: { confirm: "Are you sure you want to delete the contact?"},
+                class: "btn btn-sm btn-danger" %>
+          </div>
+          <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

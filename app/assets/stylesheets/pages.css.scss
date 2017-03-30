@@ -1,6 +1,9 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 
 #logo {
     float: left;
@@ -107,7 +110,7 @@ footer nav ul li{
 .footer-email-signup-container {
   background: #ed7f34 url("http://www.rawstory.com/wp-content/themes/worldwide-v1-02/images/rs-footer-email-icon-slanted-120.gif") no-repeat right -10px;
   max-width: 1120px;
-  color: #fff;
+ 
   padding: 10px 0;
   width: 100%;
   min-height: 80px;
@@ -117,6 +120,7 @@ footer nav ul li{
 .footer-email-signup-container .appeal {
   margin: 5px 40px 5px 25px;
   width: 400px;
+  color: #fff;
   border-right: 1px solid #fff;
   float: left;
 }
@@ -130,6 +134,10 @@ footer nav ul li{
 .footer-email-signup-container .appeal img {
   float: left;
   margin: 10px 30px 10px 15px;
+}
+.footer-email-signup-container input {
+  border: 1px solid #fff;
+  border-radius: 5px;
 }
 .footer-email-signup-container input[type="submit"]{
   color: #fff; 

@@ -1,0 +1,24 @@
+<h1 class="center" >All Contacts Books User</h1>
+
+<div class="center">
+<%= will_paginate %>
+
+<% @users.each do |user| %>
+<ul class="listing">
+<div class="row">
+  <div class="well well-lg col-xs-6 col-xs-offset-3">
+    <li><%= link_to gravatar_for(user), user_path(user) %></li>
+    <li class="contact-link"><%= link_to user.full_name, user_path(user) %></li>
+    <li class="contact-link"><%= link_to user.email, user_path(user) %></li>
+    <li><small><%= pluralize(user.contacts.count, "contact") if user.contacts %></small></li>
+    
+    <% if logged_in? and current_user.admin? %>
+    <li><%= link_to 'Delete this User', user_path(user), method: :delete, class: 'btn btn-md btn-danger',
+         data: {confirm: "Are you sure you want to delete this user and all their contacts?" } %></li>
+    <% end %>
+    </div>
+  </div>
+</ul>
+<% end %>
+<%= will_paginate %>
+</div>
