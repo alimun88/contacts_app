@@ -1,30 +1,30 @@
-<div class="footer-email">
-  <div class="footer-email-signup-container">
-    <div class="appeal"><img src="http://2d0yaz2jiom3c6vy7e7e5svk.wpengine.netdna-cdn.com/wp-content/themes/worldwide-v1-02/images/rs-footer-email-icon.gif">SIGN UP FOR OUR ADDRESS BOOK APP<br>Get the Listing of your Friends and Family</div>
-      <div class="form">
-        <form action="#" method="POST">
-          <input type="hidden" name="u" value="80b42ecc21f29763320aceb90">
-          <input type="hidden" name="id" value="1b6404e40c">
-
-          <label for="MERGE0">Email Address</label>
-          <input type="email" autocapitalize="off" autocorrect="off" name="MERGE0" id="MERGE0" size="25" value="">
-          
-          <div class="hidden-from-view"><input type="text" name="b_80b42ecc21f29763320aceb90_1b6404e40c" tabindex="-1" value=""></div>                        
-
-          <input type="submit" class="btn btn-color btn-danger btn-md" name="submit" value="SIGN UP">
+<footer>
+  <div class="row">
+    <div class="col-sm-2">
+      <h6><span>Coded with &hearts; by <a href="https://alpha-blog-mohammad-liaquat.herokuapp.com/">Mohammad L Ali</a> in Atlanta, Georgia</span></h6>
+    </div>
+  <div class="col-sm-8">
+     <% if !logged_in? %>
+    <div class="footer-email-signup-container">
+      <div class="appeal"><img src="http://2d0yaz2jiom3c6vy7e7e5svk.wpengine.netdna-cdn.com/wp-content/themes/worldwide-v1-02/images/rs-footer-email-icon.gif">SIGN UP FOR OUR ADDRESS BOOK APP<br>Get the Listing of your Friends and Family</div>
+        <div class="form">
+         
+        <form action="#">
+          <label>Email Address</label>
+          <%= link_to 'SIGN UP', signup_path, type: "submit", class: "btn btn-color btn-danger btn-md" %>
         </form>
       </div>
     </div>
+    <% end %>
 </div>
-
-<footer class="text-center footer" >
-  <nav class="nav navbar navbar-inverse ">
-    <ul class="right-links clearfix">
-      <li><%= link_to 'Home', root_path %></li>
-      <li><%= link_to 'About Us', "#" %></li>
-      <li><%= link_to 'All Contacts', "#" %></li>
-      <li><%= link_to 'Users', "#" %></li>
-    </ul>
-   <p class= "lead-para"><span><small>Coded with &hearts; by <a href="https://alpha-blog-mohammad-liaquat.herokuapp.com/">Mohammad L Ali</a> in Atlanta, Georgia</small></span></p>
-  </nav>
+    <div class="col-sm-2">
+      <h6>Navigation</h6>
+      <ul class="unstyled clearfix">
+        <li><%= link_to 'Home', root_path %></li>
+        <li><%= link_to 'About Us', "#" %></li>
+        <li><%= link_to 'All Contacts', contacts_path %></li>
+        <li><%= link_to 'Users', users_path %></li>
+      </ul>
+    </div>
+  </div>
 </footer>

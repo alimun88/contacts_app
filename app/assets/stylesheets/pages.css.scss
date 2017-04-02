@@ -4,6 +4,52 @@
 @import "font-awesome-sprockets";
 @import "font-awesome";
 
+#myCarousel .item {
+  height: 400px;
+}
+
+#slide1 {
+  background: asset_url('carousel_medium_01.jpg') top center no-repeat;
+}
+#slide2 {
+  background: asset_url('carousel_medium_02.jpg') top center no-repeat;
+}
+#slide3 {
+  background: asset_url('carousel_medium_03.jpg') top center no-repeat;
+}
+
+/* landscape phone to portrait tablet*/
+@media ( max-width: 768px) {
+  
+  #myCarousel .item { height: 310px; }
+
+  #slide1 {
+    background: asset_url('carousel_small_01.jpg') top center no-repeat;
+  }
+  #slide2 {
+    background: asset_url('carousel_small_02.jpg') top center no-repeat;
+  }
+  #slide3 {
+    background: asset_url('carousel_small_03.jpg') top center no-repeat;
+  }
+}
+
+/* large desktop*/
+@media ( min-width: 1200px) {
+  
+  #myCarousel .item { height: 500px; }
+
+  #slide1 {
+    background: asset_url('carousel_large_01.jpg') top center no-repeat;
+  }
+  #slide2 {
+    background: asset_url('carousel_large_02.jpg') top center no-repeat;
+  }
+  #slide3 {
+    background: asset_url('carousel_large_03.jpg') top center no-repeat;
+  }
+}
+  
 
 #logo {
     float: left;
@@ -44,9 +90,7 @@
     font-size: 46px;
     color: #fff;
 }
-.lead-para {
-    color: #fff;
-}
+
 .signup {
     margin-top: 90px;
 }
@@ -80,52 +124,37 @@ margin-top: 15px;
 list-style: none;
 padding-left: 0;
 }
-
-
-
-footer{
-   margin-top: 20px; 
-    width: 100%;
+h6 {
+  text-transform: uppercase;
 }
 
-footer nav ul{
-    padding: 10px;
-    text-align: center;
-    
+footer {
+  background: #333;
+  color: #eee;
+  padding: 20px;
 }
-
-footer nav ul li{  
-    text-transform: uppercase;
-    text-decoration: none;
-    font-size: 12px;
-    display: inline;
-    margin: 10px;
-}
-.footer-email {
-  background: #404040;
-  width: 100%;
-  padding: 10px 0 30px 0;  
-  max-width: 100%;
+ul.unstyled {
+  text-transform: uppercase;
+  list-style: none;
+  font-size: 12px;
+  padding: 0 ;
 }
 .footer-email-signup-container {
   background: #ed7f34 url("http://www.rawstory.com/wp-content/themes/worldwide-v1-02/images/rs-footer-email-icon-slanted-120.gif") no-repeat right -10px;
-  max-width: 1120px;
- 
-  padding: 10px 0;
-  width: 100%;
   min-height: 80px;
+  padding: 20px 0;
   border-radius: 10px;
   margin: 15px auto;
 }
 .footer-email-signup-container .appeal {
-  margin: 5px 40px 5px 25px;
-  width: 400px;
+  width: 360px;
   color: #fff;
   border-right: 1px solid #fff;
   float: left;
 }
 .footer-email-signup-container .form {
-  margin: 15px 0 5px 25px;
+  color: #fff;
+  padding: 5px 20px;
   float: left;
 }
 .hidden-from-view {
